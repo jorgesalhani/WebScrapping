@@ -19,4 +19,4 @@ def test_geckodriver_firefox_service():
     driver = FirefoxBrowser()
     gecko_path = driver.get_geckodriver_path(profile.username)
     assert os.path.exists(gecko_path)
-
+    
