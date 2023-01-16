@@ -16,4 +16,4 @@ change interpreter to ~\.virtualenvs\<project_name>\Scripts\python.exe
 - Open a new prompt with "pipenv shell" command
 
 ### External .exe download
-- geckodriver: [https://github.com/mozilla/geckodriver/releases](download releases)
+- geckodriver: [download releases](https://github.com/mozilla/geckodriver/releases)
