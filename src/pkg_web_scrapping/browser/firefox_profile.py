@@ -1,14 +1,18 @@
 import os
-import re 
-
+import re
 class FirefoxProfile:
     def __init__(self) -> None:
         self.username = os.getlogin()
 
-    def get_profile_code_default(self) -> str:
+    def get_profile_default_path(self) -> str:
         full_path = 'C:\\Users\\{}\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles'.format(self.username)
+        if not self.__check_file_exits(full_path): return ''
+
         entries = os.listdir(full_path)
         for entry in entries:
-            if "default-release" in entry: return entry.split('.')[0]
-            if "default" in entry: return entry.split('.')[0]
+            if re.search('default', entry):
+                return ''.join([full_path, f'\\{entry}'])
         return ''
+
+    def __check_file_exits(self, path: str) -> bool:
+        return os.path.exists(path)

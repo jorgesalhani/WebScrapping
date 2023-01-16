@@ -14,3 +14,6 @@ change interpreter to ~\.virtualenvs\<project_name>\Scripts\python.exe
 - Only to avoid untrack modules within src code
 - It wont work with powershell: UnauthorizedAccess
 - Open a new prompt with "pipenv shell" command
+
+### External .exe download
+- geckodriver: [https://github.com/mozilla/geckodriver/releases](download releases)
