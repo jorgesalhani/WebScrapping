@@ -34,7 +34,3 @@ class FirefoxBrowser:
 
     def __check_file_exists(self, path: str) -> bool:
         return os.path.exists(path)
-
-
-
-    
